@@ -3,6 +3,7 @@ import Dragula from 'dragula';
 import 'dragula/dist/dragula.css';
 import Swimlane from './Swimlane';
 import './Board.css';
+import Card from './Card';
 
 export default class Board extends React.Component {
   constructor(props) {
@@ -75,4 +76,12 @@ export default class Board extends React.Component {
       </div>
     );
   }
+  componentDidMount(){
+    Dragula(Array.from(document.getElementsByClassName('Swimlane-dragColumn'))).on('over', function (el, container) {
+      el.className = 'Card Card-green';
+    })
+  }
+  componentDidUpdate(){
+    Dragula(Array.from(document.getElementsByClassName('Swimlane-dragColumn')))
+    }
 }
