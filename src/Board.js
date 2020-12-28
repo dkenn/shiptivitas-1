@@ -3,7 +3,6 @@ import Dragula from 'dragula';
 import 'dragula/dist/dragula.css';
 import Swimlane from './Swimlane';
 import './Board.css';
-import Card from './Card';
 
 export default class Board extends React.Component {
   constructor(props) {
